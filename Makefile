@@ -10,4 +10,4 @@ clean:
 
 install:
 	install -d $(DESTDIR)$(systemshutdowndir)
-	install -m 644 hdstandby.sh $(DESTDIR)$(systemshutdowndir)
+	install -m 755 hdstandby.sh $(DESTDIR)$(systemshutdowndir)
