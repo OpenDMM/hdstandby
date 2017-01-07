@@ -36,7 +36,7 @@ is_active()
 	fi
 }
 
-set -- "$(ls -d /sys/block/sd* 2>/dev/null)"
+set -- $(ls -d /sys/block/sd* 2>/dev/null)
 for path; do
 	eval "$(udevadm info -q property $path | grep -E '^(DEVNAME|MAJOR|MINOR)=')"
 
